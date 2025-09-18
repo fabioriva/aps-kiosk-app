@@ -39,7 +39,9 @@
 		<div class="bg-yellow-100"><Clock /></div>
 	</div>
 	<!-- Video -->
+	 <div class="h-[576px] flex align-center">
 	<Video />
+	 </div>
 	<!--  -->
 	{@render children?.()}
 	<!-- Footer -->
