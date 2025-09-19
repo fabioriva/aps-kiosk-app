@@ -12,17 +12,11 @@
 	];
 	let isPressed = $state(false);
 	const push = async () => {
-		console.log('push');
-
 		isPressed = true;
-		// await fetch('/api/push');
 		await fetch('/api/close/1');
 	};
 	const release = async () => {
-		console.log('release');
-
 		isPressed = false;
-		// await fetch('/api/release');
 		await fetch('/api/close/0');
 	};
 </script>
