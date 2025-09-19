@@ -30,7 +30,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="h-[1280px] w-[800px]">
+<div class="h-[1280px] w-[800px] bg-slate-200">
 	<!-- Header -->
 	<div class="align-center flex h-[64px] w-full items-center bg-slate-500 px-3 text-center text-xl">
 		<div class="bg-yellow-100"><Comm status={comm.status} /></div>
@@ -38,16 +38,16 @@
 		<div class="bg-yellow-100"><Clock /></div>
 	</div>
 	<!-- Video -->
-	<div class="h-[576px] flex bg-indigo-200">
+	<div class="h-[576px] flex">
 		<Video />
 	</div>
 	<!--  UI -->
-	<div class="h-[576px] flex items-center justify-center bg-rose-200">
+	<div class="h-[576px] flex items-center justify-center">
 		{@render children?.()}
 	</div>
 	<!-- Footer -->
 	<div
-		class="align-center absolute bottom-0 flex h-[64px] w-full items-center bg-slate-500 px-3 text-center"
+		class="align-center absolute bottom-0 flex h-[64px] w-full items-center px-3 text-center bg-slate-500"
 	>
 		<div class="grow bg-yellow-100">
 			<span class="font-normal"
