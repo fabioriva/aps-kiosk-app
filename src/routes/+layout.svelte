@@ -32,10 +32,10 @@
 
 <div class="h-[1280px] w-[800px] bg-slate-200">
 	<!-- Header -->
-	<div class="flex h-[64px] w-full items-center bg-slate-500 px-3 text-center text-xl">
-		<div class="bg-yellow-100"><Comm status={comm.status} /></div>
-		<div class="grow font-semibold uppercase bg-yellow-500">Kiosk P{page.nr}</div>
-		<div class="bg-yellow-100"><Clock /></div>
+	<div class="flex h-[64px] w-full items-center px-3 text-center text-xl">
+		<div><Comm status={comm.status} /></div>
+		<div class="grow font-semibold uppercase">Kiosk P{page.nr}</div>
+		<div><Clock /></div>
 	</div>
 	<!-- Video -->
 	<div class="h-[576px] flex">
@@ -46,14 +46,12 @@
 		{@render children?.()}
 	</div>
 	<!-- Footer -->
-	<div
-		class="flex h-[64px] w-[800px] items-center px-3 text-center bg-slate-500"
-	>
-		<div class="grow bg-yellow-100">
-			<span class="font-normal"
+	<div class="flex h-[64px] w-[800px] items-center px-3 text-center">
+		<div class="grow font-normal">
+			<!-- <span class="font-normal"
 				>© {new Date().getFullYear()} Sotefin SA. Made with
-				<span class="inline-block"
-					><svg
+				<span class="inline-block">
+					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="16"
 						height="16"
@@ -65,9 +63,10 @@
 							fill-rule="evenodd"
 							d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
 						/>
-					</svg></span
-				> in Switzerland.</span
-			>
+					</svg>
+				</span> in Switzerland.</span
+			> -->
+			<span>© {new Date().getFullYear()} Sotefin SA. All rights reserved.</span>
 		</div>
 	</div>
 </div>

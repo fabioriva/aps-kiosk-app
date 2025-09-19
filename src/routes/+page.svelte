@@ -30,4 +30,5 @@
 	{/if}
 {:else}
 	<Error message="kiosk offline" />
+	<!-- <Success message="kiosk online" /> -->
 {/if}
