@@ -32,7 +32,7 @@
 
 <div class="h-[1280px] w-[800px] bg-slate-200">
 	<!-- Header -->
-	<div class="align-center flex h-[64px] w-full items-center bg-slate-500 px-3 text-center text-xl">
+	<div class="flex h-[64px] w-full items-center bg-slate-500 px-3 text-center text-xl">
 		<div class="bg-yellow-100"><Comm status={comm.status} /></div>
 		<div class="grow font-semibold uppercase bg-yellow-500">Kiosk P{page.nr}</div>
 		<div class="bg-yellow-100"><Clock /></div>
@@ -47,7 +47,7 @@
 	</div>
 	<!-- Footer -->
 	<div
-		class="align-center absolute bottom-0 flex h-[64px] w-full items-center px-3 text-center bg-slate-500"
+		class="flex h-[64px] w-[800px] items-center px-3 text-center bg-slate-500"
 	>
 		<div class="grow bg-yellow-100">
 			<span class="font-normal"

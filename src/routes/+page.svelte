@@ -1,6 +1,7 @@
 <script>
 	import { getContext } from 'svelte';
 	import Alert from '$lib/Alert.svelte';
+	import Close from '$lib/Close.svelte';
 	import Error from '$lib/Error.svelte';
 	import Success from '$lib/Success.svelte';
 
@@ -18,6 +19,9 @@
 				<img src="rfid-01.png" alt="rfid tag" class="mx-auto" width="640" height="640" />
 			</div>
 		{/if}
+	{:else if page.nr === 2}
+	<p>hello</p>
+		<Close />
 	{:else}
 		<Error message="KIOSK offline" />
 	{/if}
