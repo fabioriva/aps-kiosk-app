@@ -42,7 +42,7 @@
 		<Video />
 	</div>
 	<!--  UI -->
-	<div class="h-[576px] flex items-center justify-center">
+	<div class="h-[576px] bg-rose-100">
 		{@render children?.()}
 	</div>
 	<!-- Footer -->

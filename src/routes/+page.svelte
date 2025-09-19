@@ -11,18 +11,20 @@
 	$inspect(page);
 </script>
 
-<div>
-	{#if comm.status}
-		{#if page.nr === 1}
-			<div class="space-y-6">
+{#if comm.status}
+	{#if page.nr === 1}
+		<Alert message="Swipe tag to start" role="info" title="Action required" />
+		<div class="h-[443px] flex items-center justify-center bg-green-100">
+			<img src="rfid-01.png" alt="rfid tag" />
+		</div>
+
+		<!-- <div class="flex flex-col items-center bg-lime-100">
 				<Alert message="Swipe tag to start" role="info" title="Action required" />
-				<img src="rfid-01.png" alt="rfid tag" class="mx-auto" width="640" height="640" />
-			</div>
-		{/if}
+				<img src="rfid-01.png" alt="rfid tag" class="mx-auto" />
+			</div> -->
 	{:else if page.nr === 2}
-	<p>hello</p>
 		<Close />
-	{:else}
-		<Error message="KIOSK offline" />
 	{/if}
-</div>
+{:else}
+	<Error message="kiosk offline" />
+{/if}
