@@ -17,7 +17,7 @@
 <!-- Note: string interpolation is not working for Tailwind -->
 <!-- class={`bg-${color}-100 border-t-4 border-${color}-700 text-${color}-700 rounded-b px-4 py-3 shadow-md`} -->
 
-<div class="{setColor(role)} border-t-4 rounded-b px-4 py-3 shadow-md" role="alert">
+<div class="{setColor(role)} border-t-4 rounded-b px-4 py-3 shadow-md w-[640px]" role="alert">
 	<p class="font-bold text-xl">{title}</p>
 	<p class="leading-tight py-4 text-4xl uppercase">{message}</p>
 </div>

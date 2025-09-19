@@ -15,8 +15,7 @@
 	setContext('page', page);
 	setContext('mesg', mesg);
 	onMount(() => {
-		console.log('the component has mounted', PUBLIC_WS);
-		const ws = new WebSocket(PUBLIC_WS); // + '/info');
+		const ws = new WebSocket(PUBLIC_WS);
 		ws.onmessage = (e) => {
 			const m = JSON.parse(e.data);
 			// console.log(m);
@@ -39,11 +38,13 @@
 		<div class="bg-yellow-100"><Clock /></div>
 	</div>
 	<!-- Video -->
-	 <div class="h-[576px] flex align-center">
-	<Video />
-	 </div>
-	<!--  -->
-	{@render children?.()}
+	<div class="h-[576px] flex bg-indigo-200">
+		<Video />
+	</div>
+	<!--  UI -->
+	<div class="h-[576px] flex items-center justify-center bg-rose-200">
+		{@render children?.()}
+	</div>
 	<!-- Footer -->
 	<div
 		class="align-center absolute bottom-0 flex h-[64px] w-full items-center bg-slate-500 px-3 text-center"
