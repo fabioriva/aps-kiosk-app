@@ -3,7 +3,7 @@
 	let { message } = $props();
 </script>
 
-<div class="space-y-32">
-	<Alert {message} role="success" title="Success" />
+<Alert {message} role="success" title="Success" />
+<div class="h-[443px] flex items-center justify-center">
 	<img src="success-160.png" alt="success" class="mx-auto" width="256" height="256" />
 </div>
