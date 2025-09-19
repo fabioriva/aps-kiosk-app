@@ -22,7 +22,7 @@
 </script>
 
 <Alert message={messages[mesg.nr]} role="warning" title="Action required" />
-<div class="h-[443px] flex items-center justify-center bg-green-300">
+<div class="h-[443px] flex items-center justify-center">
 	<button
 		class={`w-[256px] h-[256px] rounded-full bg-yellow-500 border-4 border-yellow-600 opacity-100 shadow-2xl shadow-slate-700 font-bold text-2xl text-amber-700 uppercase ${isPressed && 'bg-gradient-to-br from-amber-500 to-amber-600 text-amber-600'}`}
 		onmousedown={push}
