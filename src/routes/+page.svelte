@@ -11,7 +11,7 @@
 	$inspect(page);
 </script>
 
-{#if comm.status}
+{#if !comm.status}
 	{#if page.nr === 1}
 		<Alert message="Swipe tag to start" role="info" title="Action required" />
 		<div class="h-[443px] flex items-center justify-center bg-green-100">
