@@ -3,6 +3,7 @@
 	import Alert from '$lib/Alert.svelte';
 	import Close from '$lib/Close.svelte';
 	import Error from '$lib/Error.svelte';
+	import Keypad from '$lib/Keypad.svelte';
 	// import Success from '$lib/Success.svelte';
 
 	const comm = getContext('comm');
@@ -24,6 +25,8 @@
 			</div> -->
 	{:else if page.nr === 2}
 		<Close />
+	{:else if page.nr == 3}
+		<Keypad />
 	{/if}
 {:else}
 	<Error message="kiosk offline" />
