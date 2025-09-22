@@ -1,9 +1,5 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
-
-	const dispatch = createEventDispatcher();
-	let { key } = $props();
-	const press = (key) => dispatch('press', { key });
+	let { key, press } = $props();
 </script>
 
 <button

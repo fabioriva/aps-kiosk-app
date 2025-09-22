@@ -18,7 +18,7 @@
 		const ws = new WebSocket(PUBLIC_WS);
 		ws.onmessage = (e) => {
 			const m = JSON.parse(e.data);
-			console.log(m);
+			// console.log(m);
 			comm.status = m['comm'];
 			page.nr = m['page'];
 			mesg.close = m['closeMesg'];

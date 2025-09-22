@@ -4,12 +4,16 @@
 	import Close from '$lib/Close.svelte';
 	import Error from '$lib/Error.svelte';
 	import Keypad from '$lib/Keypad.svelte';
-	// import Success from '$lib/Success.svelte';
+	import Success from '$lib/Success.svelte';
+	import { error } from '@sveltejs/kit';
 
 	const comm = getContext('comm');
+	const mesg = getContext('mesg');
 	const page = getContext('page');
 	$inspect(comm);
+	$inspect(mesg);
 	$inspect(page);
+	console.log(mesg)
 </script>
 
 {#if comm.status}
@@ -27,8 +31,11 @@
 		<Close />
 	{:else if page.nr == 3}
 		<Keypad />
+	{:else if page.nr == 4}
+		<Error message={`message ${mesg.error.toString()}`} />
+	{:else if page.nr == 5}
+		<Success message={`message ${mesg.success.toString()}`}/>
 	{/if}
 {:else}
 	<Error message="kiosk offline" />
-	<!-- <Success message="kiosk online" /> -->
 {/if}
