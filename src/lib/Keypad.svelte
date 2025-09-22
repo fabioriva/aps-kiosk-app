@@ -3,7 +3,7 @@
 	import Key from '$lib/Key.svelte';
 	let pin = $state('');
 	const handlePress = async (key) => {
-		console.log(key);
+		// console.log(key);
 		pin += key;
 		if (pin.length >= 3) {
 			const url = `/api/pin?pin=${pin}`;
