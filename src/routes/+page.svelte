@@ -29,11 +29,11 @@
 			</div> -->
 	{:else if page.nr === 2}
 		<Close />
-	{:else if page.nr == 3}
+	{:else if page.nr === 3}
 		<Keypad />
-	{:else if page.nr == 4}
+	{:else if page.nr === 4}
 		<Error message={`message ${mesg.error.toString()}`} />
-	{:else if page.nr == 5}
+	{:else if page.nr === 5}
 		<Success message={`message ${mesg.success.toString()}`}/>
 	{/if}
 {:else}
