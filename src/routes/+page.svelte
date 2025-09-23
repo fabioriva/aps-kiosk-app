@@ -5,7 +5,6 @@
 	import Error from '$lib/Error.svelte';
 	import Keypad from '$lib/Keypad.svelte';
 	import Success from '$lib/Success.svelte';
-	import { error } from '@sveltejs/kit';
 
 	const comm = getContext('comm');
 	const mesg = getContext('mesg');
@@ -13,7 +12,7 @@
 	$inspect(comm);
 	$inspect(mesg);
 	$inspect(page);
-	console.log(mesg)
+	// console.log(mesg)
 </script>
 
 {#if comm.status}

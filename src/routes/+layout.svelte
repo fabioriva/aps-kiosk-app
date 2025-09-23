@@ -32,9 +32,9 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="h-[1280px] w-[800px] bg-slate-200">
+<div class="h-[1280px] w-[800px] bg-linear-to-br from-slate-400 to-slate-200">
 	<!-- Header -->
-	<div class="flex h-[64px] w-full items-center px-3 text-center text-xl">
+	<div class="flex h-[64px] w-full items-center px-3 text-center text-lg">
 		<div><Comm status={comm.status} /></div>
 		<div class="grow font-semibold uppercase">Kiosk P{page.nr}</div>
 		<div><Clock /></div>
