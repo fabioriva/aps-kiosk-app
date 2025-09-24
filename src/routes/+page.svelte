@@ -16,7 +16,7 @@
 	$inspect(mesg);
 </script>
 
-{($locale = lang.nr > 0 && lang.nr <= locales.length ? locales[lang.nr - 1] : 'en')}
+<span class="invisible">{($locale = lang.nr > 0 && lang.nr <= locales.length ? locales[lang.nr - 1] : 'en')}</span>
 {#if comm.status}
 	{#if page.nr === 1}
 		<Alert message={$t('swipe.mesg')} role="info" title={$t('title.action')} />

@@ -16,18 +16,21 @@
 	// 	}
 	// };
 	const handlePress = async (key: string) => {
-		console.log('Pressed key', typeof key, key);
 		await fetch('/api/key/1' + key);
 		pin += key;
 	};
 	const handleRelease = async (key: string) => {
-		console.log('Released key', typeof key, key);
 		await fetch('/api/key/0' + key);
 	};
 </script>
 
-<Alert
+<!-- <Alert
 	message={pin ? pin.replace(/\d(?!$)/g, '•') : $t("pin.message")}
+	role="warning"
+	title={$t("title.action")}
+/> -->
+<Alert
+	message={$t("pin.mesg").concat(" ", pin.replace(/\d(?!$)/g, '•'))}
 	role="warning"
 	title={$t("title.action")}
 />
