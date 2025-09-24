@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Alert from '$lib/Alert.svelte';
 	import Key from '$lib/Key.svelte';
+	import { t } from '$lib/i18n';
 	let pin = $state('');
 	// const handlePress = async (key: string) => {
 	// 	console.log(key);
@@ -26,9 +27,9 @@
 </script>
 
 <Alert
-	message={pin ? pin.replace(/\d(?!$)/g, '•') : 'Enter PIN code'}
+	message={pin ? pin.replace(/\d(?!$)/g, '•') : $t("pin.message")}
 	role="warning"
-	title="Action required"
+	title={$t("action")}
 />
 <div class="mt-5">
 	<!-- <h1>{pin ? pin.replace(/\d(?!$)/g, '•') : 'Enter PIN'}</h1> -->
