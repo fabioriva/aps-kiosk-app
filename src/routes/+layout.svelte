@@ -9,9 +9,11 @@
 
 	let { children } = $props();
 	let comm = $state({ status: false });
+	let lang = $state({ nr: 1 });
 	let page = $state({ nr: 0 });
 	let mesg = $state({ close: 0, error: 0, success: 0 });
 	setContext('comm', comm);
+	setContext('lang', lang);
 	setContext('page', page);
 	setContext('mesg', mesg);
 	onMount(() => {
@@ -20,6 +22,7 @@
 			const m = JSON.parse(e.data);
 			// console.log(m);
 			comm.status = m['comm'];
+			lang.nr = m['lang'];
 			page.nr = m['page'];
 			mesg.close = m['closeMesg'];
 			mesg.error = m['errorMesg'];

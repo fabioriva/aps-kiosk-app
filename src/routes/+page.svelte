@@ -5,15 +5,17 @@
 	import Error from '$lib/Error.svelte';
 	import Keypad from '$lib/Keypad.svelte';
 	import Success from '$lib/Success.svelte';
-	import { t, locale } from '$lib/i18n';
+	import { t, locale, locales } from '$lib/i18n';
 	const comm = getContext('comm');
-	const mesg = getContext('mesg');
-	const page = getContext('page');
 	$inspect(comm);
-	$inspect(mesg);
+	const lang = getContext('lang');
+	$inspect(lang);
+	const page = getContext('page');
 	$inspect(page);
-	// console.log(mesg)
-	$locale = "it"
+	const mesg = getContext('mesg');
+	$inspect(mesg);
+	$locale = locales[lang.nr - 1];
+	// console.log($locale, locales, lang, locales[lang.nr - 1]);
 </script>
 
 {#if comm.status}
@@ -22,11 +24,6 @@
 		<div class="h-[443px] flex items-center justify-center">
 			<img src="rfid-01.png" alt="rfid tag" />
 		</div>
-
-		<!-- <div class="flex flex-col items-center bg-lime-100">
-				<Alert message="Swipe tag to start" role="info" title={$t("action")} />
-				<img src="rfid-01.png" alt="rfid tag" class="mx-auto" />
-			</div> -->
 	{:else if page.nr === 2}
 		<Close />
 	{:else if page.nr === 3}
