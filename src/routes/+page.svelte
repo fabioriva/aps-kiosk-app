@@ -6,6 +6,8 @@
 	import Keypad from '$lib/Keypad.svelte';
 	import Success from '$lib/Success.svelte';
 	import { t, locale, locales } from '$lib/i18n';
+	const card = getContext('card');
+	$inspect(card);
 	const comm = getContext('comm');
 	$inspect(comm);
 	const lang = getContext('lang');
@@ -16,7 +18,9 @@
 	$inspect(mesg);
 </script>
 
-<span class="invisible">{($locale = lang.nr > 0 && lang.nr <= locales.length ? locales[lang.nr - 1] : 'en')}</span>
+<span class="invisible"
+	>{($locale = lang.nr > 0 && lang.nr <= locales.length ? locales[lang.nr - 1] : 'en')}</span
+>
 {#if comm.status}
 	{#if page.nr === 1}
 		<Alert message={$t('swipe.mesg')} role="info" title={$t('title.action')} />
@@ -28,7 +32,7 @@
 	{:else if page.nr === 3}
 		<Keypad />
 	{:else if page.nr === 4}
-		<Error message={$t(`error.mesg.${Number(mesg.error)}`)} />
+		<Error message={$t(`error.mesg.${Number(mesg.error)}`, { card: card.nr })} />
 	{:else if page.nr === 5}
 		<Success message={$t(`success.mesg.${Number(mesg.success)}`)} />
 	{/if}

@@ -8,19 +8,22 @@
 	import Video from '$lib/Video.svelte';
 	import { locale } from '$lib/i18n';
 	let { children } = $props();
+	let card = $state({ nr: 0 });
+	setContext('card', card);
 	let comm = $state({ status: false });
-	let lang = $state({ nr: 1 });
-	let page = $state({ nr: 0 });
-	let mesg = $state({ close: 0, error: 0, success: 0 });
 	setContext('comm', comm);
+	let lang = $state({ nr: 1 });
 	setContext('lang', lang);
-	setContext('page', page);
+	let mesg = $state({ close: 0, error: 0, success: 0 });
 	setContext('mesg', mesg);
+	let page = $state({ nr: 0 });
+	setContext('page', page);
 	onMount(() => {
 		const ws = new WebSocket(PUBLIC_WS);
 		ws.onmessage = (e) => {
 			const m = JSON.parse(e.data);
 			// console.log(m);
+			card.nr = m['card'];
 			comm.status = m['comm'];
 			lang.nr = m['lang'];
 			page.nr = m['page'];
@@ -37,13 +40,17 @@
 
 <div class="h-[1280px] w-[800px] bg-linear-to-br from-slate-400 to-slate-200 cursor-none">
 	<!-- Header -->
-	<div class="flex h-[64px] w-full items-center px-3 text-center text-lg">
+	<div class="flex h-[64px] w-full gap-3 items-center px-3 text-center text-lg">
 		<div><Comm status={comm.status} /></div>
-		<div class="grow font-semibold uppercase">Kiosk P{page.nr} {$locale}</div>
+		<div class="grow font-semibold uppercase">
+			Kiosk p{page.nr}
+			{$locale}
+			{card.nr !== 0 ? 'tag ' + card.nr : ''}
+		</div>
 		<div><Clock /></div>
 	</div>
 	<!-- Video -->
-	<div class="h-[576px] flex">
+	<div class="h-[576px] flex flex-col justify-center">
 		<Video />
 	</div>
 	<!--  UI -->
