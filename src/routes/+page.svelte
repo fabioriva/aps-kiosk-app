@@ -14,13 +14,12 @@
 	$inspect(page);
 	const mesg = getContext('mesg');
 	$inspect(mesg);
-	$locale = locales[lang.nr - 1];
-	// console.log($locale, locales, lang, locales[lang.nr - 1]);
 </script>
 
+{($locale = lang.nr > 0 && lang.nr <= locales.length ? locales[lang.nr - 1] : 'en')}
 {#if comm.status}
 	{#if page.nr === 1}
-		<Alert message={$t('swipe')} role="info" title={$t("action")} />
+		<Alert message={$t('swipe.mesg')} role="info" title={$t('title.action')} />
 		<div class="h-[443px] flex items-center justify-center">
 			<img src="rfid-01.png" alt="rfid tag" />
 		</div>
@@ -31,7 +30,7 @@
 	{:else if page.nr === 4}
 		<Error message={$t(`error.mesg.${Number(mesg.error)}`)} />
 	{:else if page.nr === 5}
-		<Success message={$t(`success.mesg.${Number(mesg.success)}`)}/>
+		<Success message={$t(`success.mesg.${Number(mesg.success)}`)} />
 	{/if}
 {:else}
 	<Error message="kiosk offline" />

@@ -6,7 +6,7 @@
 	import Clock from '$lib/Clock.svelte';
 	import Comm from '$lib/Comm.svelte';
 	import Video from '$lib/Video.svelte';
-
+	import { locale } from '$lib/i18n';
 	let { children } = $props();
 	let comm = $state({ status: false });
 	let lang = $state({ nr: 1 });
@@ -39,7 +39,7 @@
 	<!-- Header -->
 	<div class="flex h-[64px] w-full items-center px-3 text-center text-lg">
 		<div><Comm status={comm.status} /></div>
-		<div class="grow font-semibold uppercase">Kiosk P{page.nr}</div>
+		<div class="grow font-semibold uppercase">Kiosk P{page.nr} {$locale}</div>
 		<div><Clock /></div>
 	</div>
 	<!-- Video -->

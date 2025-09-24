@@ -29,7 +29,7 @@
 <Alert
 	message={pin ? pin.replace(/\d(?!$)/g, '•') : $t("pin.message")}
 	role="warning"
-	title={$t("action")}
+	title={$t("title.action")}
 />
 <div class="mt-5">
 	<!-- <h1>{pin ? pin.replace(/\d(?!$)/g, '•') : 'Enter PIN'}</h1> -->

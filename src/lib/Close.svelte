@@ -24,7 +24,7 @@
 	};
 </script>
 
-<!-- <Alert message={messages[mesg.close]} role="warning" title={$t("action")} /> -->
+<!-- <Alert message={messages[mesg.close]} role="warning" title={$t("title.action")} /> -->
 <Alert message={$t(`close.mesg.${Number(mesg.close)}`)} role="warning" title={$t('action')} />
 <div class="h-[443px] flex items-center justify-center">
 	<button

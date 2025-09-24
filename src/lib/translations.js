@@ -1,6 +1,5 @@
 export default {
   en: {
-    "action": "action required",
     "close.button": "hold to close",
     "close.mesg.0": "press and hold the button to close",
     "close.mesg.1": "gate closed, release the button",
@@ -25,10 +24,10 @@ export default {
     "success.mesg.2": "entry started",
     "success.mesg.3": "exit started",
     "success.title": "success",
-    "swipe": "swipe tag to start"
+    "swipe.mesg": "swipe tag to start",
+    "title.action": "action required"
   },
   it: {
-    "action": "azione richiesta",
     "close.button": "chiudi",
     "close.mesg.0": "tenere premuto il pulsante per chiudere",
     "close.mesg.1": "cancello chiuso, rilasciare il pulsante",
@@ -42,7 +41,7 @@ export default {
     "error.mesg.4": "entrata non consentita",
     "error.mesg.5": "uscita non consentita",
     "error.mesg.6": "coda di uscita piena",
-    "error.mesg.7": "già nella coda di uscita",
+    "error.mesg.7": "tessera in coda di uscita",
     "error.mesg.8": "sistema non disponibile per l'uscita",
     "error.mesg.9": "sistema non disponibile per l'entrata",
     "error.mesg.10": "codice pin errato",
@@ -53,6 +52,7 @@ export default {
     "success.mesg.2": "entrata iniziata",
     "success.mesg.3": "uscita confermata",
     "success.title": "successo",
-    "swipe": "avvicinare la tessera per iniziare"
+    "swipe.mesg": "avvicinare la tessera per iniziare",
+    "title.action": "azione richiesta"
   },
 }
