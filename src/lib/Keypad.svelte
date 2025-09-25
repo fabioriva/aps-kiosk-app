@@ -30,9 +30,9 @@
 	title={$t("title.action")}
 /> -->
 <Alert
-	message={$t("pin.mesg").concat(" ", pin.replace(/\d(?!$)/g, '•'))}
+	message={`${$t('pin.mesg')} <span class='font-bold'>${pin.replace(/\d(?!$)/g, '•')}</span>`}
 	role="warning"
-	title={$t("title.action")}
+	title={$t('title.action')}
 />
 <div class="mt-5">
 	<!-- <h1>{pin ? pin.replace(/\d(?!$)/g, '•') : 'Enter PIN'}</h1> -->

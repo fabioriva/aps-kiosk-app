@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	let { message, role, title } = $props();
-	function setColor(role) {
+	function setColor(role: string) {
 		switch (role) {
 			case 'error':
 				return 'bg-red-100 border-red-700 text-red-700';
@@ -12,7 +12,7 @@
 				return 'bg-yellow-100 border-yellow-700 text-yellow-700';
 		}
 	}
-	function setFontSize(message) {
+	function setFontSize(message: string) {
 		if(message.length <= 36) {
 			return "text-3xl"
 		} else {
@@ -26,5 +26,5 @@
 
 <div class="{setColor(role)} border-t-4 rounded-xl mx-6 px-6 py-3 shadow-md" role="alert">
 	<p class="capitalize font-bold text-xl">{title}</p>
-	<p class="leading-tight py-4 {setFontSize(message)} uppercase">{message}</p>
+	<p class="leading-tight py-4 {setFontSize(message)} uppercase">{@html message}</p>
 </div>
