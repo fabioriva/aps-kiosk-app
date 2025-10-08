@@ -35,6 +35,8 @@
 		<Error message={$t(`error.mesg.${Number(mesg.error)}`, { card: card.nr })} />
 	{:else if page.nr === 5}
 		<Success message={$t(`success.mesg.${Number(mesg.success)}`)} />
+	{:else}
+		<Alert message={"no motion detected"} role="info" title={"info"} />
 	{/if}
 {:else}
 	<Error message="kiosk offline" />
