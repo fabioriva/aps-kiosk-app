@@ -25,6 +25,6 @@
 <!-- class={`bg-${color}-100 border-t-4 border-${color}-700 text-${color}-700 rounded-b px-4 py-3 shadow-md`} -->
 
 <div class="{setColor(role)} border-l-4 rounded-xl mx-6 px-6 py-3" role="alert">
-	<p class="capitalize font-semibold text-xl">{title}</p>
+	<p class="capitalize text-xl">{title}</p>
 	<p class="leading-tight py-4 {setFontSize(message)} uppercase">{@html message}</p>
 </div>

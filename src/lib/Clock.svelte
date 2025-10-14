@@ -21,8 +21,8 @@
 	});
 </script>
 
-<div class="clockWrapper py-1 w-28 bg-white rounded-lg">
-	<p class="clockDisplay font-semibold">
+<div class="clockWrapper py-1 w-32 bg-white rounded-lg">
+	<p class="clockDisplay">
 		{hour <= 12 ? hour : hour - 12}:{min}:{sec}
 		{dayOrNight}
 	</p>

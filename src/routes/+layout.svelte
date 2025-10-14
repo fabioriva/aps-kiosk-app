@@ -38,11 +38,11 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="h-[1280px] w-[800px] bg-linear-to-br from-slate-400 to-slate-200 cursor-none">
+<div class="h-[1280px] w-[800px] bg-stone-700/10 cursor-none">
 	<!-- Header -->
 	<div class="flex h-[64px] w-full gap-3 items-center px-3 text-center text-lg">
 		<div><Comm status={comm.status} /></div>
-		<div class="grow font-semibold uppercase">
+		<div class="grow uppercase">
 			Kiosk p{page.nr}
 			{$locale}
 			{card.nr !== 0 ? 'tag ' + card.nr : ''}
