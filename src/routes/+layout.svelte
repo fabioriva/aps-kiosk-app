@@ -32,13 +32,27 @@
 			mesg.success = m['successMesg'];
 		};
 	});
+	function setColor(page: number) {
+		// console.log(typeof page, page);
+		switch (page) {
+			case 1:
+				return 'bg-blue-700/10';
+			case 2:
+			case 3:
+				return 'bg-yellow-700/10';
+			case 4:
+				return 'bg-red-700/10';
+			case 5:
+				return 'bg-green-700/10';
+		}
+	}
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="h-[1280px] w-[800px] bg-stone-700/10 cursor-none">
+<div class="h-[1280px] w-[800px] cursor-none {setColor(page.nr)}">
 	<!-- Header -->
 	<div class="flex h-[64px] w-full gap-3 items-center px-3 text-center text-lg">
 		<div><Comm status={comm.status} /></div>
@@ -59,7 +73,7 @@
 	</div>
 	<!-- Footer -->
 	<div class="flex h-[64px] w-[800px] items-center px-3 text-center">
-		<div class="grow font-normal">
+		<div class="grow font-normal text-stone-900">
 			<!-- <span class="font-normal"
 				>© {new Date().getFullYear()} Sotefin SA. Made with
 				<span class="inline-block">
