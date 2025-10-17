@@ -7,7 +7,7 @@
 			case 'info':
 				return 'bg-blue-700/10 border-blue-700 text-blue-700';
 			case 'success':
-				return 'bg-green-700/10 border-green-700 text-green-700';
+				return 'bg-lime-700/10 border-lime-700 text-lime-700';
 			case 'warning':
 				return 'bg-yellow-700/10 border-yellow-700 text-yellow-700';
 		}
@@ -24,7 +24,7 @@
 <!-- Note: string interpolation is not working for Tailwind -->
 <!-- class={`bg-${color}-100 border-t-4 border-${color}-700 text-${color}-700 rounded-b px-4 py-3 shadow-md`} -->
 
-<div class="{setColor(role)} border-l-4 rounded-xl mx-6 px-6 py-3" role="alert">
+<div class="{setColor(role)} border-4 rounded-xl px-6 py-3 text-center w-[776px]" role="alert">
 	<p class="capitalize text-xl">{title}</p>
 	<p class="leading-tight py-4 {setFontSize(message)} uppercase">{@html message}</p>
 </div>

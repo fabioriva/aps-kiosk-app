@@ -36,14 +36,14 @@
 		// console.log(typeof page, page);
 		switch (page) {
 			case 1:
-				return 'bg-blue-700/10';
+				return 'bg-blue-700/20';
 			case 2:
 			case 3:
-				return 'bg-yellow-700/10';
+				return 'bg-yellow-700/20';
 			case 4:
-				return 'bg-red-700/10';
+				return 'bg-red-700/20';
 			case 5:
-				return 'bg-green-700/10';
+				return 'bg-lime-700/20';
 		}
 	}
 </script>
@@ -52,7 +52,8 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="h-[1280px] w-[800px] cursor-none {setColor(page.nr)}">
+<!-- <div class="h-[1280px] w-[800px] cursor-none {setColor(page.nr)} bg-stone-900 text-white"> -->
+<div class="h-[1280px] w-[800px] cursor-none bg-stone-900 text-white">
 	<!-- Header -->
 	<div class="flex h-[64px] w-full gap-3 items-center px-3 text-center text-lg">
 		<div><Comm status={comm.status} /></div>
@@ -64,16 +65,23 @@
 		<div><Clock /></div>
 	</div>
 	<!-- Video -->
-	<div class="h-[576px] flex flex-col justify-center">
+	<!-- <div class="h-[576px] flex flex-col justify-center">
+		<Video />
+	</div> -->
+	<h1 class="flex h-[64px] items-center justify-center text-3xl font-semibold">
+		Automated Parking | Daman Building
+	</h1>
+	<div class="h-[450px] flex flex-col justify-center">
 		<Video />
 	</div>
 	<!--  UI -->
-	<div class="h-[576px]">
+	<!-- <div class="h-[576px]"> -->
+	<div class="h-[638px] flex flex-col items-center">
 		{@render children?.()}
 	</div>
 	<!-- Footer -->
 	<div class="flex h-[64px] w-[800px] items-center px-3 text-center">
-		<div class="grow font-normal text-stone-900">
+		<div class="grow font-normal">
 			<!-- <span class="font-normal"
 				>© {new Date().getFullYear()} Sotefin SA. Made with
 				<span class="inline-block">

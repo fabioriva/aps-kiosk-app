@@ -34,7 +34,7 @@
 	role="warning"
 	title={$t('title.action')}
 />
-<div class="mt-5">
+<div class="flex items-center justify-center h-full w-full">
 	<!-- <h1>{pin ? pin.replace(/\d(?!$)/g, '•') : 'Enter PIN'}</h1> -->
 	<div class="grid grid-cols-4 gap-2 align-center justify-items-center mx-auto w-[410px]">
 		<Key key={'1'} press={handlePress} release={handleRelease} />
