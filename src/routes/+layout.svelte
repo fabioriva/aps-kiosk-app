@@ -55,12 +55,13 @@
 <!-- <div class="h-[1280px] w-[800px] cursor-none {setColor(page.nr)} bg-stone-900 text-white"> -->
 <div class="h-[1280px] w-[800px] cursor-none bg-stone-900 text-white">
 	<!-- Header -->
-	<div class="flex h-[64px] w-full gap-3 items-center px-3 text-center text-lg">
+	<div class="flex h-[64px] w-full gap-3 items-center px-3 text-center text-xl">
 		<div><Comm status={comm.status} /></div>
-		<div class="grow uppercase">
-			Kiosk p{page.nr}
-			{$locale}
-			{card.nr !== 0 ? 'tag ' + card.nr : ''}
+		<div class="grow">
+			Daman Building &#10023;
+			<span class="grow uppercase">
+			Kiosk {"01"}
+			</span>
 		</div>
 		<div><Clock /></div>
 	</div>
@@ -68,9 +69,10 @@
 	<!-- <div class="h-[576px] flex flex-col justify-center">
 		<Video />
 	</div> -->
-	<h1 class="flex h-[64px] items-center justify-center text-3xl font-semibold">
+	<!-- <h1 class="flex h-[64px] items-center justify-center text-3xl font-semibold">
 		Automated Parking | Daman Building
-	</h1>
+	</h1> -->
+	<div class="h-[64px] text-center uppercase">page {page.nr} {$locale} {card.nr !== 0 ? 'tag ' + card.nr : ''}</div>
 	<div class="h-[450px] flex flex-col justify-center">
 		<Video />
 	</div>

@@ -25,7 +25,8 @@
 	});
 </script>
 
-<div class="clockWrapper py-1 w-32 bg-white rounded-lg text-black">
+<!-- <div class="clockWrapper py-1 w-32 bg-white rounded-lg text-black"> -->
+<div class="clockWrapper py-1 w-32">
 	<p class="clockDisplay">
 		{hour <= 12 ? addZero(hour) : addZero(hour - 12)}:{addZero(min)}:{addZero(sec)}
 		{dayOrNight}
