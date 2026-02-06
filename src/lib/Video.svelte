@@ -2,7 +2,7 @@
 	import { getContext } from 'svelte';
 	const page = getContext('page');
 	// $inspect(page);
-	const VIDEO_SRC = 'aps.mp4';
+	const VIDEO_SRC = 'https://sveltejs.github.io/assets/caminandes-llamigos.mp4'; // 'aps.mp4'
 </script>
 
 {#if page.nr === 0}
