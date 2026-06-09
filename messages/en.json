@@ -12,7 +12,7 @@
 	"error.4": "Entry not permitted",
 	"error.5": "Exit not permitted",
 	"error.6": "Exit queue is full",
-	"error.7": "Card {{card}} already in the exit queue",
+	"error.7": "Card {card} already in the exit queue",
 	"error.8": "System not available for entry",
 	"error.9": "System not available for exit",
 	"error.10": "Wrong pin code",

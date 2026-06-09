@@ -7,7 +7,7 @@
 
 <div class="flex flex-col gap-24 items-center text-center">
   <h1 class="font-bold px-6 text-6xl text-red-700 tracking-tighter uppercase">
-    {m[`error.${ws.message?.errorMesg}`]()}
+    {m[`error.${ws.message?.errorMesg}`]({ card: 10})}
   </h1>
   <svg
     width="360"

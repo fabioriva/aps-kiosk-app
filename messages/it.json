@@ -12,7 +12,7 @@
 	"error.4": "Entrata non consentita",
 	"error.5": "Uscita non consentita",
 	"error.6": "Coda di uscita piena",
-	"error.7": "Tessera {{card}} nella coda di uscita",
+	"error.7": "Tessera {card} nella coda di uscita",
 	"error.8": "Sistema non disponibile per l'uscita",
 	"error.9": "Sistema non disponibile per l'entrata",
 	"error.10": "Codice pin non valido",
