@@ -1,57 +1,43 @@
 <script lang="ts">
-	import Alert from '$lib/Alert.svelte';
-	import Key from '$lib/Key.svelte';
-	import { t } from '$lib/i18n';
-	let pin = $state('');
-	// const handlePress = async (key: string) => {
-	// 	console.log(key);
-	// 	pin += key;
-	// 	if (pin.length >= 3) {
-	// 		const url = `/api/pin?pin=${pin}`;
-	// 		pin = '';
-	// 		const res = await fetch(url);
-	// 		const json = await res.json();
-	// 		console.log(json);
-	// 		// await fetch(url).json();
-	// 	}
-	// };
-	const handlePress = async (key: string) => {
-		await fetch('/api/key/1' + key);
-		pin += key;
-	};
-	const handleRelease = async (key: string) => {
-		await fetch('/api/key/0' + key);
-	};
+  import { m } from "./paraglide/messages.js";
+  import Key from "$lib/Key.svelte";
+  let pin = $state("");
+  const handlePress = async (key: string) => {
+    await fetch("/api/key/1" + key);
+    if (pin.length < 3) {
+      pin += key;
+    } else {
+      pin = "";
+    }
+  };
+  const handleRelease = async (key: string) => {
+    await fetch("/api/key/0" + key);
+  };
 </script>
 
-<!-- <Alert
-	message={pin ? pin.replace(/\d(?!$)/g, '•') : $t("pin.message")}
-	role="warning"
-	title={$t("title.action")}
-/> -->
-<Alert
-	message={`${$t('pin.mesg')} <span class='font-bold'>${pin.replace(/\d(?!$)/g, '•')}</span>`}
-	role="warning"
-	title={$t('title.action')}
-/>
-<div class="flex items-center justify-center h-full w-full">
-	<!-- <h1>{pin ? pin.replace(/\d(?!$)/g, '•') : 'Enter PIN'}</h1> -->
-	<div class="grid grid-cols-4 gap-2 align-center justify-items-center mx-auto w-[410px]">
-		<Key key={'1'} press={handlePress} release={handleRelease} />
-		<Key key={'2'} press={handlePress} release={handleRelease} />
-		<Key key={'3'} press={handlePress} release={handleRelease} />
-		<Key key={'C'} press={handlePress} release={handleRelease} />
-		<Key key={'4'} press={handlePress} release={handleRelease} />
-		<Key key={'5'} press={handlePress} release={handleRelease} />
-		<Key key={'6'} press={handlePress} release={handleRelease} />
-		<Key key={'D'} press={handlePress} release={handleRelease} />
-		<Key key={'7'} press={handlePress} release={handleRelease} />
-		<Key key={'8'} press={handlePress} release={handleRelease} />
-		<Key key={'9'} press={handlePress} release={handleRelease} />
-		<Key key={'E'} press={handlePress} release={handleRelease} />
-		<Key key={'A'} press={handlePress} release={handleRelease} />
-		<Key key={'0'} press={handlePress} release={handleRelease} />
-		<Key key={'B'} press={handlePress} release={handleRelease} />
-		<Key key={'F'} press={handlePress} release={handleRelease} />
-	</div>
+<div class="flex flex-col gap-12 items-center text-center">
+  <h1 class="font-bold text-6xl tracking-tighter uppercase bg-red-700 py-6">
+    {m.enter_pin()}
+  </h1>
+  <h2 class="font-bold text-6xl tracking-tighter uppercase">
+    {pin ? pin.replace(/\d(?!$)/g, "•") : "•••"}
+  </h2>
+  <div class="grid grid-cols-4 gap-1.5 align-center">
+    <Key key={"1"} press={handlePress} release={handleRelease} />
+    <Key key={"2"} press={handlePress} release={handleRelease} />
+    <Key key={"3"} press={handlePress} release={handleRelease} />
+    <Key key={"C"} press={handlePress} release={handleRelease} />
+    <Key key={"4"} press={handlePress} release={handleRelease} />
+    <Key key={"5"} press={handlePress} release={handleRelease} />
+    <Key key={"6"} press={handlePress} release={handleRelease} />
+    <Key key={"D"} press={handlePress} release={handleRelease} />
+    <Key key={"7"} press={handlePress} release={handleRelease} />
+    <Key key={"8"} press={handlePress} release={handleRelease} />
+    <Key key={"9"} press={handlePress} release={handleRelease} />
+    <Key key={"E"} press={handlePress} release={handleRelease} />
+    <Key key={"A"} press={handlePress} release={handleRelease} />
+    <Key key={"0"} press={handlePress} release={handleRelease} />
+    <Key key={"B"} press={handlePress} release={handleRelease} />
+    <Key key={"F"} press={handlePress} release={handleRelease} />
+  </div>
 </div>
