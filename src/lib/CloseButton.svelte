@@ -21,7 +21,7 @@
 <div class="space-y-24 text-center">
   <!-- <div class="h-64 flex items-center"> -->
   <h1
-    class="h-64 flex items-center font-bold text-6xl tracking-tighter uppercase bg-red-700 px-3 py-6"
+    class="h-64 flex items-center justify-center font-bold text-6xl tracking-tighter uppercase bg-red-700 px-3 py-6 w-200"
   >
     {#if ws.message?.closeMesg === 1}
       <span>{m.gate_closed()}</span>
