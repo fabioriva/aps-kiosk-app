@@ -18,8 +18,8 @@
   };
 </script>
 
-<div class="space-y-24 text-center">
-  <!-- <div class="h-64 flex items-center"> -->
+<!-- <div class="space-y-24 text-center"> -->
+  <div class="flex flex-col items-center gap-12 text-center">
   <h1
     class="h-64 flex items-center justify-center font-bold text-6xl tracking-tighter uppercase bg-red-700 px-3 py-6 w-200"
   >
@@ -35,7 +35,7 @@
   </h1>
   <!-- </div> -->
   <button
-    class="rounded-full w-64 h-64
+    class="rounded-full w-80 h-80
          bg-gradient-to-b from-yellow-300 via-yellow-500 to-yellow-700
          active:from-yellow-400 active:via-yellow-600 active:to-yellow-800
          shadow-md active:shadow-inner

@@ -41,7 +41,7 @@
   <div
     class="absolute top-0 w-full h-[70px] flex items-center justify-center font-bold text-3xl tracking-tighter uppercase px-3"
   >
-    <h1 class="grow-1">
+    <h1 class="grow">
       Sotefin SA <span class="bg-red-600 px-3">Aps Kiosk</span>
     </h1>
     <div class={`${wsState.message?.comm ? "text-green-700" : "text-red-600"}`}>
@@ -56,6 +56,7 @@
     </div>
   </div>
   {@render children()}
+  
 </div>
 
 <div style="display:none">
