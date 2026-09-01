@@ -3,7 +3,7 @@
   import type { Pathname } from "$app/types";
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
-  import { getLocale, locales, localizeHref } from "$lib/paraglide/runtime";
+  import { /*getLocale, */locales, localizeHref } from "$lib/paraglide/runtime";
   import { setWSContext } from "$lib/ws-context";
   import "./layout.css";
   import favicon from "$lib/assets/favicon.svg";
@@ -48,10 +48,10 @@
       <!-- {wsState.message?.lang !== undefined
         ? locales[wsState.message?.lang]
         : undefined} -->
-      <span>{getLocale()}</span>
-      {wsState.message?.page !== undefined
+      <!-- <span>{getLocale()}</span> -->
+      <!-- {wsState.message?.page !== undefined
         ? "P" + wsState.message?.page
-        : undefined}
+        : undefined} -->
       <a href="/ip">{wsState.message?.comm ? "ONLINE" : "OFFLINE"}</a>
     </div>
   </div>
