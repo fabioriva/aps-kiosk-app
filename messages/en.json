@@ -17,6 +17,7 @@
 	"error.9": "System not available for exit",
 	"error.10": "Wrong pin code",
 	"error.11": "Questions not confirmed",
+	"error.12": "System not available",
 	"gate_closed": "Gate closed, release the button",
 	"gate_closing": "Gate closing",
 	"gate_opening": "Gate opening",
@@ -28,7 +29,9 @@
 	"question.3": "Question 3 description",
 	"success.0": "Success",
 	"success.1": "Entry request",
-  "success.2": "Entry started",
-  "success.3": "Exit started",
+        "success.2": "Entry started",
+        "success.3": "Exit started",
+        "success.4": "Entry in progress",
+        "success.5": "Exit in progress",
 	"swipe_to_start": "Swipe tag to start"
 }
